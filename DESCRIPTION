@@ -1,0 +1,13 @@
+Package: myUtils
+Type: Package
+Title: Various Functions
+Version: 1.0.2
+Author: Matt Garber
+Maintainer: Matt Garber <mattgarber4@gmail.com>
+Description: Various functions covering combinatorics, strings, coding, merging, graphics, and more. Also includes data for colors.
+License: CC0
+Encoding: UTF-8
+LazyData: true
+Depends: magrittr
+Imports: RSelenium
+RoxygenNote: 6.1.1
