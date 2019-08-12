@@ -73,7 +73,7 @@ collapseWS <- function(str) {
 #' @param str a character
 #' @return A numeric indicating how many words are in the input.
 #' @examples
-#' collapseWS("hello world") # 2
+#' nwordsfun("hello world") # 2
 nwordsfun <- function(str) {
     str <- trimws(str) %>% collapseWS()
     if (str == "") {
@@ -88,4 +88,19 @@ nwordsfun <- function(str) {
 
     length(n) + 1
 
+}
+
+
+#' Fix annoying encoding issues
+#'
+#' @param txt a character
+#' @return The same character but curly quotes and apostrophes subbed for their straight equivalents
+#' @examples
+#' collapseWS("Mom couldn’t say “hello” without laughing") # "Mom couldn't say "hello" without laughing
+replaceCurlies <- function(txt) {
+    txt <- gsub("”|“", '"', txt)
+    txt <- gsub("’|‘", "'", txt)
+    # txt <- gsub("â€™", "'", txt)
+    # txt <- gsub("â€œ|â€\u009", '"', txt)
+    return(txt)
 }
