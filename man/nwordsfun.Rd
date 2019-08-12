@@ -16,5 +16,5 @@ A numeric indicating how many words are in the input.
 Determine the number of words in a given string
 }
 \examples{
-collapseWS("hello world") # 2
+nwordsfun("hello world") # 2
 }
