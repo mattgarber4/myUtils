@@ -49,10 +49,30 @@ tupleGen <- function(setn, k, as.num = FALSE, unique = FALSE, collapsed = FALSE)
 
 
 permute <- function(setn, as.num = FALSE) {
-    return(tupleGen(setn = setn,
-                    k = length(setn),
-                    as.num = as.num,
-                    unique = TRUE))
+    out <- .permuter(setn)
+
+    if (as.num) {
+        for (i in 1:dim(out)[1]) {
+            out[, i] <- as.numeric(out[, i])
+        }
+    }
+
+    colnames(out) <- NULL
+    as.matrix(out)
+}
+
+.permuter <- function(setn) {
+    if (length(setn) == 1) {
+        return(setn[1])
+    }
+
+    len <- factorial(length(setn) - 1)
+    lapply(1:length(setn), function(i) {
+        cbind(
+            rep(setn[i], len),
+            .permuter(setn[-i])
+        )
+    }) %>% myBind(type = "df.row")
 }
 
 
