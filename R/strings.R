@@ -95,8 +95,6 @@ nwordsfun <- function(str) {
 #'
 #' @param txt a character
 #' @return The same character but curly quotes and apostrophes subbed for their straight equivalents
-#' @examples
-#' collapseWS("Mom couldn’t say “hello” without laughing") # "Mom couldn't say "hello" without laughing
 replaceCurlies <- function(txt) {
     txt <- gsub("”|“", '"', txt)
     txt <- gsub("’|‘", "'", txt)
