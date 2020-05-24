@@ -15,6 +15,3 @@ The same character but curly quotes and apostrophes subbed for their straight eq
 \description{
 Fix annoying encoding issues
 }
-\examples{
-collapseWS("Mom couldn’t say “hello” without laughing") # "Mom couldn't say "hello" without laughing
-}
