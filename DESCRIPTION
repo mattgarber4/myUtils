@@ -8,6 +8,10 @@ Description: Various functions covering combinatorics, strings, coding, merging,
 License: CC0
 Encoding: UTF-8
 LazyData: true
-Depends: aoos, hash, magrittr
+Depends: 
+    aoos,
+    hash,
+    magrittr,
+    R (>= 2.10)
 Imports: RSelenium
 RoxygenNote: 6.1.1
