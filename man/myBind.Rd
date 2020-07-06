@@ -13,6 +13,6 @@ myBindVec(x, left = 1, right = length(x))
 \item{type}{character, indicates output. Defaults to \code{"df.row"}. \code{"vec"} binds to a vector. \code{"df.row"} binds by row to a dataframe. \code{"df.col"} binds by column to a dataframe.}
 }
 \description{
-Binds elements of a list to each other as a data frame or a vector. \code{myBindVec} is depricated. Use \code{myBind{..., type = "vec"}}
+Binds elements of a list to each other as a data frame or a vector. \code{myBindVec} is depricated. Use \code{myBind{..., type = "vec"}}.
 }
 

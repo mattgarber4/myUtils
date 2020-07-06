@@ -12,6 +12,10 @@ myBind <- function(x, left = 1, right = length(x), type = "df.row") {
 
 
 .myBindHelper <- function(x, left, right, type) {
+    if (right < left) {
+        return(NULL)
+    }
+    
     if (type == "vec") {
         binder <- c
         if (!is.vector(x[[1]])) {
