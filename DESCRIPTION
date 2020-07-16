@@ -1,7 +1,7 @@
 Package: myUtils
 Type: Package
 Title: Various Functions
-Version: 1.1.4
+Version: 1.1.5
 Author: Matt Garber
 Maintainer: Matt Garber <mattgarber4@gmail.com>
 Description: Various functions covering combinatorics, strings, coding, merging, graphics, and more. Also includes data for colors.
@@ -14,4 +14,4 @@ Depends:
     magrittr,
     R (>= 2.10)
 Imports: RSelenium
-RoxygenNote: 7.1.0
+RoxygenNote: 7.1.1
